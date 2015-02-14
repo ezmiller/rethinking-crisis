@@ -1,0 +1,38 @@
+{
+	"name": "rethinking-crisis",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Website for the conference Rethinking Crisis",
+	"homepage": "https://github.com/lukekarrys/html5-boilerplate.docpad",
+	"keywords": [
+		"docpad-skeleton",
+		"docpad",
+		"website",
+		"skeleton",
+		"html5 boilerplate",
+		"h5bp",
+		"grunt"
+	],
+	"author": "Ethan Miller",
+	"engines" : {
+		"node": "0.8.x",
+		"npm": "1.1.x"
+	},
+	"dependencies": {
+		"docpad": "6.x",
+		"docpad-plugin-coffeescript": "2.x",
+		"docpad-plugin-eco": "2.x",
+		"docpad-plugin-marked": "2.x",
+		"docpad-plugin-partials": "2.x",
+		"docpad-plugin-stylus": "2.x",
+		"docpad-plugin-text": "2.x",
+		"grunt": "~0.3.17",
+		"grunt-css": "~0.3.2",
+		"bal-util": "~1.15.3",
+		"underscore": "~1.4.3"
+	},
+	"devDependencies": {
+		"docpad-plugin-livereload": "2.x"
+	},
+	"main": "node_modules/docpad/bin/docpad-server"
+}
