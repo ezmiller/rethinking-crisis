@@ -18,6 +18,11 @@ docpadConfig = {
 			keywords: """
 				crisis, marxism, capitalism, materialism, critical theory, nancy fraser, ecological crisis, social reproduction
 				"""
+				
+		collections:
+			lectures: ->
+				@getCollection("html").findAllLive({relativeOutDirPath: 'lectures'}).on "add", (model) ->
+					model.setMetaDefaults({layout: 'lecture'})
 
 		environments:
 			production:
