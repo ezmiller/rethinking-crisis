@@ -24,18 +24,9 @@
 
 	</head>
 	<body>
-		<% console.log 'hello there in the console' %>
-		<% console.log @getCollection('lectures') %>
-	    <!--[if lt IE 7]>
-	        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-	    <![endif]-->
-
-		<header></header>
-		<article>
-			<%- @content %>
-		</article>
-		<footer></footer>
-
+		<div class="container">
+			<%- @partial('intro') %>
+		</div>
 		<!-- DocPad Scripts + Our Own -->
 		<%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
 	</body>
