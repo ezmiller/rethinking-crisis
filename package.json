@@ -19,15 +19,16 @@
     "npm": "1.1.x"
   },
   "dependencies": {
+    "bal-util": "~1.15.3",
     "docpad": "6.x",
     "docpad-plugin-coffeescript": "2.x",
     "docpad-plugin-eco": "2.x",
     "docpad-plugin-marked": "2.x",
     "docpad-plugin-partials": "2.x",
+    "docpad-plugin-sass": "~2.7.4",
     "docpad-plugin-text": "2.x",
     "grunt": "~0.3.17",
     "grunt-css": "~0.3.2",
-    "bal-util": "~1.15.3",
     "underscore": "~1.4.3"
   },
   "devDependencies": {
