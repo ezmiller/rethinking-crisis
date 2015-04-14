@@ -4,8 +4,7 @@
 ---------------------------------- */
 
 .intro {
-	position: fixed;
-	top: 0; left:0;
+	overflow: auto;
 	text-align: center;
 
 	.branding {
