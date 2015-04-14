@@ -24,48 +24,57 @@
 /* Modules
 ---------------------------------- */
 
-.intro {
-	width: 100%;
-	height: 100vh;
-	background: #333;
-
-	.title {
-		font-family: 'Marcellus SC', serif;
-		font-size: 2.6rem;
-		color: #fff;
-	}
-
-	.subtitle,
-	.description {
-		font-family: sans-serif;
-	}
-
-	.subtitle {
-		@extend h5;
-		font-family: sans-serif;
-		font-weight: 400;
-		color: #fff;
-	}
-
-	.ecology,
-	.society,
-	.democracy {
-		display: inline-block;
-		margin-right: 1.5rem;
-	}
-
-	.description {
-		font-size: 1.4rem;
-		color: #fff;
-	}
-
-	.invite {
-		-webkit-animation: font-weight-change 1s 1;
-		animation: font-weight-change 1s 1;
-		-webkit-animation-delay: 1s;
-        animation-delay: 1s;
-	}
+.section {
+	display: block;
+	padding: 15px 0;
 }
+
+	.intro {
+		width: 100%;
+		height: 100vh;
+		background: #333;
+
+		.title {
+			font-family: 'Marcellus SC', serif;
+			font-size: 2.6rem;
+			color: #fff;
+		}
+
+		.subtitle,
+		.description {
+			font-family: sans-serif;
+		}
+
+		.subtitle {
+			@extend h5;
+			font-family: sans-serif;
+			font-weight: 400;
+			color: #fff;
+		}
+
+		.ecology,
+		.society,
+		.democracy {
+			display: inline-block;
+			margin-right: 1.5rem;
+		}
+
+		.description {
+			font-size: 1.4rem;
+			color: #fff;
+		}
+
+		.invite {
+			-webkit-animation: font-weight-change 1s 1;
+			animation: font-weight-change 1s 1;
+			-webkit-animation-delay: 1s;
+	        animation-delay: 1s;
+		}
+	}
+
+
+/* Animations
+---------------------------------- */
 
 @-webkit-keyframes color-change {
   0% { color: #1EAEDB; }

@@ -29,6 +29,7 @@
 	<body>
 		<%- @partial('intro') %>
 		<div class="container">
+			<%- @partial('about') %>
 		</div>
 		<!-- DocPad Scripts + Our Own -->
 		<%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
