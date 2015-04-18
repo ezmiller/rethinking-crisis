@@ -30,6 +30,80 @@
 		<%- @partial('intro') %>
 		<div class="container">
 			<%- @partial('about') %>
+			<section class="day">
+				<h2 class="section-title date">Tuesday 4, Nov 2014</h2>
+				<section class="panel">
+					<header>
+						<span class="panel-number">01</span>
+						<h1 class="panel-title">Capitalism's Ecologies</h1>
+						<h2 class="panel-subtitle">Crises of Nature, Social Reproduction, and Everyday Life</h2>
+					</header>
+					<p class="section-description">
+						The speakers in this panel address the multiple crises arising in the relationship between capitalism and the broader physical and natural world that sustains human life. Capitalism's explosive productivity reflects an unprecedented ability to turn the resources of our natural world, whether raw materials or human reproductive capacities, into unlimited inputs into its unbridled drive toward the production of value. But at what cost does this subordination of our environment to the productive drive come? It's not only that capitalism seems usustainable; capitalism itself defines our ecological environment, but does so in a way that seems particularly contradictory. At the same time as capitalism relies on the resources inherent in our natural world, it also regularly generates conditions that threaten to destroy the capacity of the natural world to continue to provide the natural resoures upon which capital production depends.
+					</p>
+					<%- @partial('lecture', {slug: 'lohmann'}) %>
+					<%- @partial('lecture', {slug: 'katz'}) %>
+				</section>
+				<section class="panel">
+					<header>
+						<span class="panel-number">02</span>
+						<h1 class="panel-title">Capitalism's Labors</h1>
+						<h2 class="panel-subtitle">Crises of Emancipation and Care</h2>
+					</header>
+					<p class="section-description">
+						The speakers in this panel address the multiple crises arising in the relationship between capitalism and the broader physical and natural world that sustains human life. Capitalism's explosive productivity reflects an unprecedented ability to turn the resources of our natural world, whether raw materials or human reproductive capacities, into unlimited inputs into its unbridled drive toward the production of value. But at what cost does this subordination of our environment to the productive drive come? It's not only that capitalism seems usustainable; capitalism itself defines our ecological environment, but does so in a way that seems particularly contradictory. At the same time as capitalism relies on the resources inherent in our natural world, it also regularly generates conditions that threaten to destroy the capacity of the natural world to continue to provide the natural resoures upon which capital production depends.
+					</p>
+					<%- @partial('lecture', {slug: 'stanley'}) %>
+					<%- @partial('lecture', {slug: 'oksala'}) %>
+				</section>
+				<section class="panel">
+					<header>
+						<span class="panel-number">03</span>
+						<h1 class="panel-title">Capitalism's Externalities</h1>
+						<h2 class="panel-subtitle">Keynote Lecture</h2>
+					</header>
+					<p class="section-description">
+						The speakers in this panel address the multiple crises arising in the relationship between capitalism and the broader physical and natural world that sustains human life. Capitalism's explosive productivity reflects an unprecedented ability to turn the resources of our natural world, whether raw materials or human reproductive capacities, into unlimited inputs into its unbridled drive toward the production of value. But at what cost does this subordination of our environment to the productive drive come? It's not only that capitalism seems usustainable; capitalism itself defines our ecological environment, but does so in a way that seems particularly contradictory. At the same time as capitalism relies on the resources inherent in our natural world, it also regularly generates conditions that threaten to destroy the capacity of the natural world to continue to provide the natural resoures upon which capital production depends.
+					</p>
+					<%- @partial('lecture', {slug: 'crouch'}) %>
+				</section>
+			</section>
+			<section class="day">
+				<h2 class="section-title date">Wednesday 5, Nov 2014</h2>
+				<section class="panel">
+					<header>
+						<span class="panel-number">04</span>
+						<h1 class="panel-title">Capitalism's Politics</h1>
+						<h2 class="panel-subtitle">Crisis of Europe, Crisis of Democracy</h2>
+					</header>
+					<p class="section-description">
+						The speakers in this panel address the multiple crises arising in the relationship between capitalism and the broader physical and natural world that sustains human life. Capitalism's explosive productivity reflects an unprecedented ability to turn the resources of our natural world, whether raw materials or human reproductive capacities, into unlimited inputs into its unbridled drive toward the production of value. But at what cost does this subordination of our environment to the productive drive come? It's not only that capitalism seems usustainable; capitalism itself defines our ecological environment, but does so in a way that seems particularly contradictory. At the same time as capitalism relies on the resources inherent in our natural world, it also regularly generates conditions that threaten to destroy the capacity of the natural world to continue to provide the natural resoures upon which capital production depends.
+					</p>
+					<%- @partial('lecture', {slug: 'brunkhorst'}) %>
+				</section>
+				<section class="panel">
+					<header>
+						<span class="panel-number">05</span>
+						<h1 class="panel-title">Capitalism's Economies and ours</h1>
+						<h2 class="panel-subtitle">The Future of Democracy</h2>
+					</header>
+					<p class="section-description">
+						The speakers in this panel address the multiple crises arising in the relationship between capitalism and the broader physical and natural world that sustains human life. Capitalism's explosive productivity reflects an unprecedented ability to turn the resources of our natural world, whether raw materials or human reproductive capacities, into unlimited inputs into its unbridled drive toward the production of value. But at what cost does this subordination of our environment to the productive drive come? It's not only that capitalism seems usustainable; capitalism itself defines our ecological environment, but does so in a way that seems particularly contradictory. At the same time as capitalism relies on the resources inherent in our natural world, it also regularly generates conditions that threaten to destroy the capacity of the natural world to continue to provide the natural resoures upon which capital production depends.
+					</p>
+					<%- @partial('lecture', {slug: 'corragio'}) %>
+				</section>
+				<section class="panel">
+					<header>
+						<span class="panel-number">06</span>
+						<h1 class="panel-title">Rethinking Capitalist Crisis</h1>
+						<h2 class="panel-subtitle">Concluding Panel Discussion</h2>
+					</header>
+					<p class="section-description">
+						The speakers in this panel address the multiple crises arising in the relationship between capitalism and the broader physical and natural world that sustains human life. Capitalism's explosive productivity reflects an unprecedented ability to turn the resources of our natural world, whether raw materials or human reproductive capacities, into unlimited inputs into its unbridled drive toward the production of value. But at what cost does this subordination of our environment to the productive drive come? It's not only that capitalism seems usustainable; capitalism itself defines our ecological environment, but does so in a way that seems particularly contradictory. At the same time as capitalism relies on the resources inherent in our natural world, it also regularly generates conditions that threaten to destroy the capacity of the natural world to continue to provide the natural resoures upon which capital production depends.
+					</p>
+					<%- @partial('lecture', {slug: 'concluding'}) %>
+				</section>
+			</section>
 		</div>
 		<!-- DocPad Scripts + Our Own -->
 		<%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>

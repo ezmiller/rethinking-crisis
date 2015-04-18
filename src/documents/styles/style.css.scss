@@ -24,9 +24,19 @@
 /* Modules
 ---------------------------------- */
 
-.section {
+section {
 	display: block;
 	padding: 15px 0;
+
+	h1, h2, h3, h4, h5 {
+		font-family: 'Marcellus SC', serif;
+	}
+
+	.section-title {
+		@extend h4;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+	}
 }
 
 	.intro {
@@ -70,6 +80,55 @@
 			-webkit-animation-delay: 1s;
 	        animation-delay: 1s;
 		}
+	}
+
+	section.day .section-title {
+		font-weight: 500;
+	}
+
+	section.panel {
+
+		> header {
+			text-align: center;
+
+			.panel-number {
+				display: block;
+				width: 100%;
+				margin: 0 0 0.5rem 0;
+				text-align: left;
+				font-size: 2.6rem;
+				font-weight: 900;
+			}
+
+			.panel-title {
+				@extend h4;
+				margin: 0;
+			}
+			.panel-subtitle {
+				@extend h5;
+			}
+		}
+
+		article.lecture {
+
+			header .speaker-info {
+				font-size: 1em;
+			}
+
+			header .lecture-title {
+				@extend h5;
+				margin: 0 0 0.5rem 0;
+				font-weight: 400;
+				font-style: italic;
+			}
+
+			.lecture-video {
+				width: 100%;
+				margin: 0;
+			}
+
+		}
+
 	}
 
 

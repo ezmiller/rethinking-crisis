@@ -1,0 +1,12 @@
+<% lecture = @getCollection('lectures').findAll({basename: @slug}).toJSON() %>
+<% lecture = lecture[0] %>
+<article class="lecture">
+	<video class="lecture-video" src="/videos/oil-rig.mp4" controls>
+		<p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download the video</a> instead.</p>
+	</video>
+	<header>
+		<h1 class="lecture-title"><%= lecture.title or 'Subtitle not yet defined' %></h1>
+		<h2 class="speaker-info">By <span class="name"><%= lecture.speaker or 'Speaker not yet defined' %></span>, <span class="affiliation"><%= lecture.affiliation %></span></h2>
+		<%- lecture.content %>
+	</header>
+</article>
