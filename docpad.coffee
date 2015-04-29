@@ -33,6 +33,15 @@ docpadConfig = {
 				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
 
+		environments:
+			production:
+				templateData: 
+					site:
+						title: "Rethinking Crisis"
+			staging: 
+				templateData:
+					site:
+						title: "(Staging) Rethinking Crisis"
 
 		# -----------------------------
 		# Helper Functions
