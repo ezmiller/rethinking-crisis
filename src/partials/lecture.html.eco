@@ -1,7 +1,7 @@
 <% lecture = @getCollection('lectures').findAll({basename: @slug}).toJSON() %>
 <% lecture = lecture[0] %>
 <article class="lecture">
-	<video class="lecture-video" src="/videos/oil-rig.mp4" controls>
+	<video class="lecture-video" src="<%= lecture.videoUrl %>" poster="<%= lecture.poster %>" controls>
 		<p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download the video</a> instead.</p>
 	</video>
 	<header>
