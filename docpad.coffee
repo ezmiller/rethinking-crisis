@@ -89,6 +89,10 @@ docpadConfig = {
 			_.map scripts, (value) ->
 				return value.replace 'out', ''
 
+	collections:
+			lectures: ->
+				@getCollection("html").findAllLive({relativeOutDirPath: 'lectures'}).on "add", (model) ->
+					model.setMetaDefaults({layout: 'lecture'})
 
 	# =================================
 	# DocPad Events
