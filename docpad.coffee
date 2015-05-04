@@ -11,26 +11,12 @@ docpadConfig = {
 
 		# Specify some site properties
 		site:
-			# The production url of our website
-			url: "http://website.com"
-
-			# Here are some old site urls that you would like to redirect from
-			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
-			]
-
-			# The default title of our website
-			title: "Your Website"
-
-			# The website description (for SEO)
+			url: "http://rethinkingcrisis.com"
+			title: "Rethinking Crisis"
 			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
 				"""
-
-			# The website keywords (for SEO) separated by commas
 			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+				crisis, marxism, capitalism, materialism, critical theory, nancy fraser, ecological crisis, social reproduction
 				"""
 
 		environments:
@@ -133,15 +119,15 @@ docpadConfig = {
 
 			# Make sure to register a grunt `default` task
 			command = ["#{rootPath}/node_modules/.bin/grunt", 'default']
-			
+
 			# Execute
 			balUtil.spawn command, {cwd:rootPath,output:true}, ->
 				src = []
 				gruntConfig = require './grunt-config.json'
 				_.each gruntConfig, (value, key) ->
 					src = src.concat _.flatten _.pluck value, 'src'
-				_.each src, (value) ->
-					balUtil.spawn ['rm', value], {cwd:rootPath, output:false}, ->
+				# _.each src, (value) ->
+				# 	balUtil.spawn ['rm', value], {cwd:rootPath, output:false}, ->
 				balUtil.spawn ['find', '.', '-type', 'd', '-empty', '-exec', 'rmdir', '{}', '\;'], {cwd:rootPath+'/out', output:false}, ->
 				next()
 
