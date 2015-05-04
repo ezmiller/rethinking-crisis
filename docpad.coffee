@@ -19,11 +19,6 @@ docpadConfig = {
 				crisis, marxism, capitalism, materialism, critical theory, nancy fraser, ecological crisis, social reproduction
 				"""
 
-		collections:
-			lectures: ->
-				@getCollection("html").findAllLive({relativeOutDirPath: 'lectures'}).on "add", (model) ->
-					model.setMetaDefaults({layout: 'lecture'})
-
 		environments:
 			production:
 				templateData: 
@@ -80,6 +75,10 @@ docpadConfig = {
 			_.map scripts, (value) ->
 				return value.replace 'out', ''
 
+	collections:
+			lectures: ->
+				@getCollection("html").findAllLive({relativeOutDirPath: 'lectures'}).on "add", (model) ->
+					model.setMetaDefaults({layout: 'lecture'})
 
 	# =================================
 	# DocPad Events
