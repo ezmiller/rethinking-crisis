@@ -1,14 +1,26 @@
 @import 'skeleton';
 
+/* Variables
+---------------------------------- */
+
+// Breakpoints
+$mobile: 400px;
+$phablet: 550px;
+$tablet: 750px;
+$desktop: 1000px;
+$larger: 1200px;
+
 /* Layout
 ---------------------------------- */
 
 .intro {
+	width: 100%;
+	height: 100vh;
 	overflow: auto;
 	text-align: center;
 
 	.branding {
-		margin-top: 20vh;
+		margin-top: 20%;
 	}
 
 	.description {
@@ -18,6 +30,15 @@
 	.invite {
 		display: block;
 		margin-top: 4em;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.about {
+		padding: 50px 0 0 0;
+	}
+	.day {
+		padding: 35px 0 0 0;
 	}
 }
 
@@ -80,6 +101,22 @@ section {
 			-webkit-animation-delay: 1s;
 	        animation-delay: 1s;
 		}
+
+		@media screen and (min-width: $tablet) {
+			.title {
+				font-size: 4.5rem;
+			}
+			.subtitle {
+				font-size: 3rem;
+			}
+			.description {
+				font-size: 2rem;
+			}
+			.invite {
+				font-size: 2em;
+			}
+		}
+
 	}
 
 	section.day .section-title {
@@ -124,7 +161,11 @@ section {
 
 			.lecture-video {
 				width: 100%;
+				height: auto;
 				margin: 0;
+				@media screen and (min-width: $tablet) {
+					height: 36rem;	
+				}
 			}
 
 		}
@@ -141,12 +182,6 @@ section {
   100% { color: #1EAEDB; }
 }
 
-@keyframes color-change {
-  0% { color: #1EAEDB; }
-  50% { color: #AEDB1E; }
-  100% { color: #1EAEDB; }
-}
-
 @-webkit-keyframes font-weight-change {
   0% { font-weight: 400; font-size: 100%;}
   50% { font-weight: 900; font-size: 125%; }
@@ -157,4 +192,17 @@ section {
   0% { font-weight: 400; font-size: 100%;}
   50% { font-weight: 900; font-size: 125%; }
   100% { font-weight: 400; font-size: 100%; }
+}
+
+@media screen and (min-width: $tablet) {
+	@-webkit-keyframes font-weight-change {
+		0% { font-weight: 400; font-size: 2em;}
+	  50% { font-weight: 900; font-size: 2.7em; }
+	  100% { font-weight: 400; font-size: 2em; }
+	}
+	@keyframes font-weight-change {
+	  0% { font-weight: 400; font-size: 2em;}
+	  50% { font-weight: 900; font-size: 2.7rem; }
+	  100% { font-weight: 400; font-size: 2em; }
+	}
 }
