@@ -1,12 +1,23 @@
 <% lecture = @getCollection('lectures').findAll({basename: @slug}).toJSON() %>
 <% lecture = lecture[0] %>
 <article class="lecture">
-	<video class="lecture-video" src="<%= lecture.videoUrl %>" poster="<%= lecture.poster %>" controls>
-		<p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download the video</a> instead.</p>
-	</video>
+	<div class="lecture-video">
+		<video preload="auto" poster="data:image/gif,AAAA" style="background-size: 100% 100%; background-image: url('<%= lecture.poster %>');">
+			<source src="https://d1hgrmb8xl30hg.cloudfront.net/rcc-<%= lecture.className %>-medium.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+			<source src="https://d1hgrmb8xl30hg.cloudfront.net/rcc-<%= lecture.className %>-medium.mov" type='video/mov; codecs="avc1.42E01E, mp4a.40.2"'>
+			<p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download the video</a> instead.</p>
+		</video>
+		<div id="video-controls">
+	    <button type="button" id="play-pause">Play</button>
+	    <input type="range" id="seek-bar" value="0">
+	    <button type="button" id="mute">Mute</button>
+	    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+	    <button type="button" id="full-screen">Full-Screen</button>
+	  </div>
+	</div>
 	<header>
-		<h1 class="lecture-title"><%= lecture.title or 'Subtitle not yet defined' %></h1>
-		<h2 class="speaker-info">By <span class="name"><%= lecture.speaker or 'Speaker not yet defined' %></span>, <span class="affiliation"><%= lecture.affiliation %></span></h2>
+		<h1 class="speaker-info"><span class="name"><%= lecture.speaker or 'Speaker not yet defined' %></span>: <span class="affiliation"><%= lecture.affiliation %></span></h2>
+		<h2 class="lecture-title"><%= lecture.title or 'Subtitle not yet defined' %></h1>
 		<%- lecture.content %>
 	</header>
 </article>
