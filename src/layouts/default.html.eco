@@ -104,6 +104,13 @@
 					<%- @partial('lecture', {slug: 'concluding'}) %>
 				</section>
 			</section>
+			<section class="speaker-bios">
+				<div class="background"></div>
+				<h1>speaker bios</h1>
+				<div class="bios">
+					<%- @partial('speaker-bios') %>
+				</div>
+			</section>
 		</div>
 		<!-- DocPad Scripts + Our Own -->
 		<%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
