@@ -217,9 +217,43 @@ section {
 
 	}
 
+footer {
+	height: 30rem;
+	overflow: hidden;	
 
+	h1 {
+		margin: 2em 0 1em 0;
+		font-size: 2.25em;
+		line-height: 0.85em;
+	}
 
+	.logo {
+		display: inline-block;
+		vertical-align: middle;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-right: 3rem;
+	}
 
+	.einstein-logo {
+		width: 10em;
+		height: 8em;
+		background-image: url('../images/einstein-logo.png');
+	}
+
+	.gsnas-logo {
+		width: 6em;
+		height: 6em;
+		margin-bottom: .4em;
+		background-image: url('../images/gsnas-logo.png');
+	}
+
+	.jfk-logo {
+		width: 13em;
+		height: 3em;
+		background-image: url('../images/jfk-logo.gif');
+	}
 
 }
 

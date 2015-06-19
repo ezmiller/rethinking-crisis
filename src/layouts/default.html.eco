@@ -111,6 +111,12 @@
 					<%- @partial('speaker-bios') %>
 				</div>
 			</section>
+			<footer class="footer">
+				<h1>with the support of...</h2>
+				<a href="http://www.einsteinfoundation.de/en/home.html" class="logo einstein-logo"></a>
+				<a href="http://www.jfki.fu-berlin.de/en/graduateschool/index.html" class="logo gsnas-logo"></a>
+				<a href="http://www.jfki.fu-berlin.de/en/" class="logo jfk-logo"></a>
+			</footer>
 		</div>
 		<!-- DocPad Scripts + Our Own -->
 		<%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
