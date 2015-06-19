@@ -2,7 +2,7 @@
 <% lecture = lecture[0] %>
 <article class="lecture">
 	<div class="lecture-video">
-		<video preload="auto" poster="data:image/gif,AAAA" style="background-size: 100% 100%; background-image: url('<%= lecture.poster %>');">
+		<video preload="none" poster="data:image/gif,AAAA" style="background-size: 100% 100%; background-image: url('<%= lecture.poster %>');">
 			<source src="https://d1hgrmb8xl30hg.cloudfront.net/rcc-<%= lecture.className %>-medium.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 			<source src="https://d1hgrmb8xl30hg.cloudfront.net/rcc-<%= lecture.className %>-medium.mov" type='video/mov; codecs="avc1.42E01E, mp4a.40.2"'>
 			<p>Try this page in Safari 4! Or you can <a href="http://www.youtube.com/demo/google_main.mp4">download the video</a> instead.</p>

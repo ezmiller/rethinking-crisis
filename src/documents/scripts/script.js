@@ -97,6 +97,7 @@
         }
 
         function initializePlayer() {
+            this.player.preload = 'auto'; // starts video preload.
             if (this.page.isMobile()) {
                 // Remove 'type' attr for mobile so that vids will work.
                 // http://www.broken-links.com/2010/07/08/making-html5-video-work-on-android-phones/
