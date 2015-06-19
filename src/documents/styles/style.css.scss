@@ -1,14 +1,6 @@
 @import 'skeleton';
 
-/* Variables
----------------------------------- */
 
-// Breakpoints
-$mobile: 400px;
-$phablet: 550px;
-$tablet: 750px;
-$desktop: 1000px;
-$larger: 1200px;
 
 /* Layout
 ---------------------------------- */
@@ -20,11 +12,11 @@ $larger: 1200px;
 	text-align: center;
 
 	.branding {
-		margin-top: 20%;
+		margin-top: 8em;
 	}
 
 	.description {
-		margin-top: 4.5em;
+		margin: 3em 0 0 0;
 	}
 
 	.invite {
@@ -41,6 +33,12 @@ $larger: 1200px;
 	}
 }
 
+.panel > header,
+.section-description,
+.lecture {
+	margin-bottom: 7.5rem;
+}
+
 @media screen and (min-width: $tablet) {
 	.about {
 		padding: 50px 0 0 0;
@@ -50,19 +48,38 @@ $larger: 1200px;
 	}
 }
 
+@media screen and (min-width: $desktop ) {
+	.lecture {
+		display: flex;
+		flex-direction: row-reverse;
+
+		.lecture-video {
+			flex: 2;
+		}
+		header {
+			flex: 1;
+			margin-right: 2rem;
+		}
+	}
+}
+
 /* Modules
 ---------------------------------- */
+
+p {
+	color: #636363;
+}
+
+h1, h2 {
+	font-family: 'Marcellus SC', serif;
+	color: #222;
+}
 
 section {
 	display: block;
 	padding: 15px 0;
 
-	h1, h2, h3, h4, h5 {
-		font-family: 'Marcellus SC', serif;
-	}
-
 	.section-title {
-		@extend h4;
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
 	}
@@ -75,7 +92,7 @@ section {
 
 		.title {
 			font-family: 'Marcellus SC', serif;
-			font-size: 2.6rem;
+			font-size: 2.5em;
 			color: #fff;
 		}
 
@@ -85,7 +102,6 @@ section {
 		}
 
 		.subtitle {
-			@extend h5;
 			font-family: sans-serif;
 			font-weight: 400;
 			color: #fff;
@@ -95,15 +111,17 @@ section {
 		.society,
 		.democracy {
 			display: inline-block;
-			margin-right: 1.5rem;
+			margin-right: 1.2rem;
 		}
 
 		.description {
-			font-size: 1.4rem;
+			font-size: 1em;
 			color: #fff;
 		}
 
 		.invite {
+			font-size: 1.5em;
+			text-decoration: none;
 			-webkit-animation: font-weight-change 1s 1;
 			animation: font-weight-change 1s 1;
 			-webkit-animation-delay: 1s;
@@ -139,9 +157,9 @@ section {
 			.panel-number {
 				display: block;
 				width: 100%;
-				margin: 0 0 0.5rem 0;
+				margin: 0 0.5rem 0;
 				text-align: left;
-				font-size: 2.6rem;
+				font-size: 2.2em;
 				font-weight: 900;
 			}
 
@@ -154,26 +172,34 @@ section {
 			}
 		}
 
-		article.lecture {
-
+		.lecture {
 			header .speaker-info {
-				font-size: 1em;
+				@extend h5;
+				.name {
+					font-weight: 900;
+				}
+				.affiliation: {
+					font-weight: 400;
+				}
 			}
 
 			header .lecture-title {
 				@extend h5;
-				margin: 0 0 0.5rem 0;
 				font-weight: 400;
 				font-style: italic;
+				text-transform: lowercase;
 			}
 
-			.lecture-video {
-				width: 100%;
-				height: auto;
-				margin: 0;
-				@media screen and (min-width: $tablet) {
-					height: 36rem;	
-				}
+		}
+
+		@media screen and (min-width: $tablet) {
+			.panel-number {
+				font-size: 2.8em;
+			}
+		}
+
+	}
+
 	section.speaker-bios {
 
 		> h1 {
@@ -257,6 +283,98 @@ footer {
 
 }
 
+.lecture-video {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 0 1.5rem 0;
+	opacity: 0;
+
+	-webkit-transition: opacity .8s;
+	transition: opacity 0.8s;
+
+	&:hover #video-controls {
+		opacity: 1;
 	}
+	
+	video {
+		width: inherit;
+		height: auto;
+		background-size: 100% 100%;
 	}
+
+	#video-controls {
+		display: flex;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 3.5rem;
+		padding: 0.5rem 0.5rem 0 0.5rem;
+		-webkit-transition: opacity .3s;
+		-moz-transition: opacity .3s;
+		-o-transition: opacity .3s;
+		-ms-transition: opacity .3s;
+		transition: opacity .3s;
+		background: #333;
+		opacity: 0;
+	}
+
+	button,
+	input {
+		margin-left: .5rem;
+		margin-right: .5rem;
+		margin-bottom: 0;
+	}
+
+	button {
+		height: 2.4rem;
+		margin-top: 0.3rem;
+		background-image: linear-gradient(-180deg, #FFFFFF 0%, #979090 100%);
+		border: 0;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+		line-height: 1.1em;
+		color: #000;
+	}
+	button:hover {
+		cursor: pointer;
+	}
+
+	input[type="range"] {
+		margin-top: 0.3rem;
+		@media screen and (min-width: $desktop) {
+			margin-top: -0.4rem;
+		}
+	}
+
+	#play-pause {
+		flex: 1;
+	}
+
+	#seek-bar {
+		flex: 3;
+		width: 30%;
+	}
+
+	#mute {
+		flex: 2;
+	}
+
+	#volume-bar {
+		display: none;
+
+		@media screen and (min-width: $tablet) {
+			display: block;
+			width: 60px;
+		}
+
+	}
+
+	#full-screen {
+		flex: 2;
+	}
+
 }
