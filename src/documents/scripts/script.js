@@ -18,13 +18,15 @@
         };
 
         self.attach = function() {
-            var self = this;
+
             var resize = debounce(function() {
-                var videos = self.getVideoPlayers();
+                var videos;
+                this.setupSpeakerBios();
+                videos = this.getVideoPlayers();
                 $.each(videos, function(k,video) {
                     video.setVideoSize();
                 });
-            }, 200);
+            }.bind(this), 200);
             window.addEventListener('resize', resize);
         };
 
