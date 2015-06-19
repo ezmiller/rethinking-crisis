@@ -13,6 +13,7 @@
         
         self.initialize = function() {
             this.attach();
+            this.setupSpeakerBios();
             this.checkFallBacks();
             this.initializeVideoPlayers();
         };
@@ -40,6 +41,10 @@
             if (!Modernizr.cssvhunit) {
                 $('.intro').height(this.getScreenSize().y);
             }
+        };
+
+        self.setupSpeakerBios = function() {
+            $('.speaker-bios .background').height( $('.speaker-bios').height() );
         };
 
         self.getScreenSize = function () {
