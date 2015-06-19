@@ -218,36 +218,11 @@ section {
 	}
 
 
-/* Animations
----------------------------------- */
 
-@-webkit-keyframes color-change {
-  0% { color: #1EAEDB; }
-  50% { color: #AEDB1E; }
-  100% { color: #1EAEDB; }
+
+
 }
 
-@-webkit-keyframes font-weight-change {
-  0% { font-weight: 400; font-size: 100%;}
-  50% { font-weight: 900; font-size: 125%; }
-  100% { font-weight: 400; font-size: 100%; }
-}
-
-@keyframes font-weight-change {
-  0% { font-weight: 400; font-size: 100%;}
-  50% { font-weight: 900; font-size: 125%; }
-  100% { font-weight: 400; font-size: 100%; }
-}
-
-@media screen and (min-width: $tablet) {
-	@-webkit-keyframes font-weight-change {
-		0% { font-weight: 400; font-size: 2em;}
-	  50% { font-weight: 900; font-size: 2.7em; }
-	  100% { font-weight: 400; font-size: 2em; }
 	}
-	@keyframes font-weight-change {
-	  0% { font-weight: 400; font-size: 2em;}
-	  50% { font-weight: 900; font-size: 2.7rem; }
-	  100% { font-weight: 400; font-size: 2em; }
 	}
 }
